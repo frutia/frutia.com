@@ -1,0 +1,1750 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-color: rgb(230, 115, 7);
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+.logo img{
+    width: 58px;
+    height: 36px;
+    padding: 7px;
+    position: relative;
+    border-radius: 12px;
+}
+.pay .selectable {
+    user-select: text;
+}
+.menu{
+    color: #fff;
+    position: relative;
+    right: 535px;
+    font-size: 30px;
+    display: initial;
+}
+.menu.active{
+    display: none;
+}
+.close{
+    display: none;
+}
+.close.active{
+    display: block;
+    color: #fff;
+    position: relative;
+    right: 535px;
+    font-size: 30px;
+
+}
+.vertical-navigation.active {
+    position: relative;
+    right: 0px;
+    background-color: rgb(64, 152, 5);
+    width: 13%;
+    border-right: 3px solid #fff;
+}
+.change button{
+    padding: 8px 5px 8px 5px;
+    background-color: #fff;
+    margin-right: 10px;
+    border: 1px solid #f9f119;
+    border-radius: 8px;
+    font-weight: 500;
+}                                                                                                             
+.change button:hover{
+    background-color: #f9f119;
+    color: #fff;
+    cursor: pointer;
+}
+.display{
+    display: flex;
+    min-height: 92vh;
+}
+.vertical-navigation{
+    position: relative;
+    right: 180px;
+    width: 0%;
+    transition: .4s;
+}
+.vertical-navigation ul{
+    padding: 25px;
+    list-style-type: none;
+}
+.vertical-navigation ul li{
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-left: 3px solid #e1e0e0;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.vertical-navigation a{
+    text-decoration: none;
+    color: aliceblue;
+    padding-left: 5px;
+}
+.vertical-navigation a:hover{
+    color: rgb(230, 115, 7);
+    padding-left: 10px;
+    transition: .3s linear;
+}
+.space{
+    height: 92vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.space .overlay{
+    display: none;
+}
+.vertical-navigation.active +.space{
+    width: 87%;
+}
+.arrow-dropdown{
+    top: 8px;
+    color: #e1e0e0;
+    margin-left: 2px;
+    font-size: 23px;
+    background-color:rgb(64, 152, 5);
+    position: relative;
+}
+.intro{
+    width: 700px;
+    color: #fff;
+    position: absolute;
+    top: 170px;
+    right: 333px;
+}
+.intro h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7rem;
+}
+.intro h4{
+    color: rgb(230, 115, 7);
+    font-size: 35px;
+}
+.intro p{
+    font-size: 18px;
+}
+.vertical-navigation + .apples, 
+.vertical-navigation.active .apples{
+    display: none;
+}
+.apples{
+    width: 70%;
+    margin: 50px 0 0 92px;
+}
+.apples h2{
+    color: rgb(230, 115, 7);
+    padding-left: 15px;
+    border-left: 4px solid rgb(64, 152, 5);
+    text-decoration: underline;
+    margin-left: 20px;
+}
+.apples img{
+    width: 320px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgb(230, 115, 7);
+    box-shadow: 0px 0px 20px 6px rgb(251, -27, 78);
+    margin-top: 55px;
+    animation: spin 400s infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(3600deg);
+    }   
+}
+.container{
+    position: relative;
+    top: -311px;
+    right: -417px;
+    height: 0px;
+}
+.space.fruitdisplay .intro{
+    display: none;
+}
+.fruti{
+    background-color: rgb(64, 152, 5);
+}
+.fruti{
+    position: relative;
+    top: -185px;
+    transition: 1s ease;
+    display: flex;
+    justify-content: space-between;
+}
+.fruti.active{
+    height: 45px;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    top: 0px;
+}
+.fruti li:first-child{
+    margin: 0 0px 0 20px;
+}
+.fruti li:last-child{
+    margin: 0 20px 0 0px;
+}
+.fruti li{
+    list-style: none;
+}
+.fruti li a{
+    color: rgb(64, 152, 5);
+    font-size: 15px;
+    text-decoration: none;
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 7px;
+    transition: .6s ease;
+}
+.fruti li a:hover{
+    color: red;
+}
+.fruti li:hover{
+    transform: scale(1.03);
+}
+.space.fruitdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/fruitsclick.jpg);
+}
+.vege{
+    background-color: rgb(64, 152, 5);
+    position: relative;
+    top: -130px;
+    display: flex;
+    transition: 1s ease;
+    justify-content: space-between;
+}
+.vege.active{
+    display: flex;
+    height: 45px;
+    align-items: center;
+    top: -18px;
+}
+.vege li{
+    list-style: none;
+}.vege li a{
+    color: rgb(64, 152, 5);
+    font-size: 15px;
+    text-decoration: none;
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 7px;
+    transition: .6s ease;
+}
+.vege li a:hover{
+    color: red;
+}
+.vege li:hover{
+    transform: scale(1.03);
+}
+.vege.active + .space{
+    border: 2px solid rgb(230, 115, 7);
+    border-radius: 40px;
+}
+.vege li:first-child{
+    margin: 0 0px 0 20px;
+}
+.vege li:last-child{
+    margin: 0 20px 0 0px;
+}
+.space.appledisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/apples.jpg);
+}
+.space.pinedisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/pineapples.jpg);
+}
+.space.strawdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/strawdisplay.jpg);
+}
+.space.melondisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/melondisplay.jpg);
+}
+.space.carrotdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/carrotdisplay.jpg);
+}
+.space.tomatodisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/tomatoes.jpg);
+}
+.space.plumdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/plum.jpg);
+}
+.space.orangedisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/orangedisplay.jpg);
+}
+.space.oniondisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/oniondispaly.jpg);
+}
+.space.mangodisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/mangodisplay.jpg);
+}
+.space.berrydisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/blackberry.jpg);
+}
+.space.spinachdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/spinach.jpg);
+}
+.coverimage{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 9, 36, 0.336),rgba(5, 14, 51, 0.637)), url(images/cover.jpg);
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+.section h1{
+    color: #fff;
+    position: relative;
+    top: 125px;
+    font-size: 3rem;
+}
+.space.pumkindisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/pumkindisplay.jpg);
+}
+.space.lettucedisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/lettuce.jpg);
+}
+.space.cucumberdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/cucumberdisplay.jpg);
+}
+.space.brocollidisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/brocollidisplay.jpg);
+}
+.space.oniondisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/mixonion.jpg);
+}
+.space.garlicdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/garlicdisplay.jpg);
+}
+.space.gingerdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/gingerdisplay.jpg);
+}
+.space.carrotdisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/carrotdisplay.jpg);
+}
+.space.greendisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/gr.jpg);
+}
+.fruti-info{
+    position: relative;
+    width: 50%;
+}
+.space.fruitdisplay .fruti-info.active{
+    color: #fff;
+    display: block;
+    width: 50%;
+    margin: 50px 0 0 180px;
+    position: relative;
+}
+.fruti-info h2{
+    color: #fff;
+    font-size: 95px;
+    right: -1500px;
+    transition: 1s ease;
+    position: relative;
+    border-left: 8px solid rgb(230, 115, 7);
+    padding-left: 20px;
+}
+.space.fruitdisplay .fruti-info.active h2{
+    right: 50px;
+}
+.fruti-info h4{
+    right: -1500px;
+    position: relative;
+}
+.space.fruitdisplay .fruti-info.active h4{
+    right: 50px;
+    position: relative;
+    transition: 1.5s ease;
+    color: rgb(230, 115, 7);
+    font-size: 30px;
+}
+.fruti-info p{
+    color: #fff;
+    font-size: 20px;
+    right: -1500px;
+    position: relative;
+}
+.space.fruitdisplay .fruti-info.active p{
+    right: 50px;
+    transition: 2s ease;
+}
+.vege-info{
+    position: relative;
+    width: 50%;
+    top: -275px;
+}
+.space.fruitdisplay .vege-info.active{
+    color: #fff;
+    display: block;
+    width: 50%;
+    margin: 50px 0 0 180px;
+    position: relative;
+}
+.vege-info h2{
+    color: #fff;
+    font-size: 95px;
+    left: -1500px;
+    transition: 1s ease;
+    position: relative;
+    border-left: 8px solid rgb(230, 115, 7);
+    padding-left: 20px;
+}
+.space.fruitdisplay .vege-info.active h2{
+    left: -50px;
+}
+.vege-info h4{
+    left: -1500px;
+    position: relative;
+}
+.space.fruitdisplay .vege-info.active h4{
+    left: -50px;
+    position: relative;
+    transition: 1.5s ease;
+    color: rgb(230, 115, 7);
+    font-size: 30px;
+}
+.vege-info p{
+    color: #fff;
+    font-size: 20px;
+    left: -1500px;
+    position: relative;
+}
+.space.fruitdisplay .vege-info.active p{
+    left: -50px;
+    transition: 2s ease;
+}
+.pin, .straw-image, .apple-image, .water-image, .mango-image, .orange-image, .berry-image, .plum-image,.spinach-image, .lettuce-image, .pumkin-image, .cucumber-image, .brocolli-image, .tomato-image, .onion-image, .garlic-image, .ginger-image, .carrot-image, .green-image{
+    position: relative;
+    top: -125px;
+    left: 10px;
+}
+.pin.active, .straw-image.active, .apple-image.active, .mango-image.active, .orange-image.active, .berry-image.active, .plum-image.active,.spinach-image.active, .lettuce-image.active, .pumkin-image.active, .cucumber-image.active, .brocolli-image.active, .tomato-image.active, .onion-image.active, .garlic-image.active, .ginger-image.active, .carrot-image.active, .green-image.active{
+    display: flex;
+    flex-direction: column;
+}
+.space.fruitdisplay .pin.active .pinpoint, .space.fruitdisplay .straw-image.active .pinpoint, .space.fruitdisplay .apple-image.active .pinpoint, .space.fruitdisplay .water-image.active .pinpoint, .space.fruitdisplay .mango-image.active .pinpoint, .space.fruitdisplay .orange-image.active .pinpoint, .space.fruitdisplay .berry-image.active .pinpoint, .space.fruitdisplay .plum-image.active .pinpoint, .space.fruitdisplay .ginger-image.active .pinpoint, .space.fruitdisplay .carrot-image.active .pinpoint, .space.fruitdisplay .green-image.active .pinpoint, .space.fruitdisplay .spinach-image.active .pinpoint, .space.fruitdisplay .pumkin-image.active .pinpoint, .space.fruitdisplay .lettuce-image.active .pinpoint, .space.fruitdisplay .cucumber-image.active .pinpoint, .space.fruitdisplay .brocolli-image.active .pinpoint, .space.fruitdisplay .tomato-image.active .pinpoint, .space.fruitdisplay .onion-image.active .pinpoint, .space.fruitdisplay .garlic-image.active .pinpoint{
+    display: block;
+    width: 40%;
+    height: 478px;
+    position: relative;
+    border-left: 8px solid rgb(230, 115, 7);
+    top: -933px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    left: 480px;
+}
+.move{
+    position: relative;
+    left: 500px;
+    display: none;
+}
+.pin.active .move, .straw-image.active .move, .apple-image.active .move, .water-image.active .move, .mango-image.active .move, .orange-image.active .move, .berry-image.active .move, .plum-image.active .move, .spinach-image.active .move, .lettuce-image.active .move, .pumkin-image.active .move, .cucumber-image.active .move, .brocolli-image.active .move, .tomato-image.active .move, .onion-image.active .move, .garlic-image.active .move, .ginger-image.active .move, .carrot-image.active .move, .green-image.active .move{
+    left: 0px;
+    transition: 1s ease;
+    padding-left: 20px;
+    color: #fff;
+    display: block;
+}
+.pin.active .move h4, .straw-image.active .move h4, .apple-image.active .move h4, .water-image.active .move h4, .mango-image.active .move h4, .orange-image.active .move h4, .berry-image.active .move h4, .plum-image.active .move h4, .spinach-image.active .move h4, .lettuce-image.active .move h4, .pumkin-image.active .move h4, .cucumber-image.active .move h4, .brocolli-image.active .move h4, .tomato-image.active .move h4, .onion-image.active .move h4, .garlic-image.active .move h4, .ginger-image.active .move h4, .carrot-image.active .move h4, .green-image.active .move h4{
+    color: rgb(230, 115, 7);
+    font-size: 24px;
+    margin-bottom: 2px;
+    text-decoration: underline #fff;
+    margin-top: 10px;
+}
+.pin.active .move h2, .straw-image.active .move h2, .apple-image.active .move h2, .water-image.active .move h2, .mango-image.active .move h2, .orange-image.active .move h2, .berry-image.active .move h2, .plum-image.active .move h2, .spinach-image.active .move h2, .lettuce-image.active .move h2, .pumkin-image.active .move h2, .cucumber-image.active .move h2, .brocolli-image.active .move h2, .tomato-image.active .move h2, .onion-image.active .move h2, .garlic-image.active .move h2, .ginger-image.active .move h2, .carrot-image.active .move h2, .green-image.active .move h2{
+    color: rgb(230, 115, 7);
+    text-decoration: underline #fff;
+    margin-bottom: 2px;
+}
+.imagedisplay{
+    display: none;
+}
+.pin.active .imagedisplay, .straw-image.active .imagedisplay, .apple-image.active .imagedisplay, .water-image.active .imagedisplay, .mango-image.active .imagedisplay, .orange-image.active .imagedisplay, .berry-image.active .imagedisplay, .plum-image.active .imagedisplay, .spinach-image.active .imagedisplay, .lettuce-image.active .imagedisplay, .pumkin-image.active .imagedisplay, .cucumber-image.active .imagedisplay, .brocolli-image.active .imagedisplay, .tomato-image.active .imagedisplay, .onion-image.active .imagedisplay, .garlic-image.active .imagedisplay, .ginger-image.active .imagedisplay, .carrot-image.active .imagedisplay, .green-image.active .imagedisplay{
+    display: block;
+}
+.pin.active .imagedisplay h1, .straw-image.active .imagedisplay h1, .apple-image.active .imagedisplay h1, .water-image.active .imagedisplay h1, .mango-image.active .imagedisplay h1, .orange-image.active .imagedisplay h1, .berry-image.active .imagedisplay h1, .plum-image.active .imagedisplay h1, .spinach-image.active .imagedisplay  h1, .lettuce-image.active .imagedisplay h1, .pumkin-image.active .imagedisplay h1, .cucumber-image.active .imagedisplay h1, .brocolli-image.active .imagedisplay h1, .tomato-image.active .imagedisplay h1, .onion-image.active .imagedisplay h1, .garlic-image.active .imagedisplay h1, .ginger-image.active .imagedisplay h1, .carrot-image.active .imagedisplay h1, .green-image.active .imagedisplay h1{
+    font-size: 42px;
+    color: #fff;
+    position: relative;
+    top: -75px;
+    right: 50px;
+    width: auto;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.pin img, .straw-image img, .apple-image img, .water-image img, .mango-image img, .orange-image img, .berry-image img, .plum-image img, .spinach-image img, .lettuce-image img, .pumkin-image img, .cucumber-image img, .brocolli-image img, .tomato-image img, .onion-image img, .garlic-image img, .ginger-image img, .carrot-image img, .green-image img{
+    display: none;
+}
+.pin.active img, .straw-image.active img, .apple-image.active img, .water-image.active img, .mango-image.active img, .orange-image.active img, .berry-image.active img, .plum-image.active img, .spinach-image.active img, .lettuce-image.active img, .pumkin-image.active img, .cucumber-image.active img, .brocolli-image.active img, .tomato-image.active img, .onion-image.active img, .garlic-image.active img, .ginger-image.active img, .carrot-image.active img, .green-image.active img{
+    width: 310px;
+    display: block;
+    height: 335px;
+}
+@keyframes animation{
+    0%{top: -333px;}
+    50%{top: -333px;}
+    55%{top: 0px;}
+    99%{top: 0px;} 
+    100%{top: -666px;}
+}
+.imagesanime img{
+    animation: animation 6s linear infinite;
+    position: relative;
+}
+.krystal{
+    width: 310px;
+    display: block;
+    height: 335px;
+    position: relative;
+    right: 52px;
+    top: -62px;
+    border:  2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.imagedisplay{
+    position: relative;
+    right: -150px;
+    top: -445px;
+    width: 40%; 
+}
+.michael{
+    margin: 10px 0 0 -10px;
+}
+.quantity{
+    width: 67px;
+    padding: 5px 7px 5px 7px;
+    background: transparent;
+    color: #fff;
+    margin: 0 10px;
+    border:  2px solid rgb(64, 152, 5);
+    border-radius: 5px;
+}
+.quantity::placeholder{
+    color: #fff;
+}
+.quantity:focus{
+    background: rgb(230, 115, 7);
+}
+.add-to,.see, .seeda{
+    background-color: rgb(230, 115, 7);
+    padding: 7px 10px 7px 10px;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid rgb(64, 152, 5);
+    border-radius: 10px;
+    transition: .5s ease;
+}
+.add-to:hover{
+    background-color: rgb(64, 152, 5);
+    border: 2px solid rgb(230, 115, 7);
+    transform: scale(1.05);
+}
+.honey{
+    display: none;
+}
+.honey.active{
+    display: flex;
+    position: relative;
+    right: -10px;
+    justify-content: space-evenly;
+    bottom: 666px;
+}
+.clover, .dandelion{
+    background-color: rgba(0, 0, 0, 0.249);
+    width: 35%;
+    height: 10vh;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    perspective: 1000px;
+    justify-content: center;
+    transition: 3s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+    overflow: hidden;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.clover img, .dandelion img{
+    border: 2px solid #fff;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    display: none;
+}
+.clover.active, .dandelion.active{
+    height: 87vh;
+    box-shadow: 5px 4px 9px 2px #fff;
+}
+.clover.active img, .dandelion.active img{
+    display: block;
+    transition: 2s ease;
+    transition-delay: 4s;
+}
+.clover h1, .dandelion h1{
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    top: 10px;
+}
+.clover.active h1, .dandelion.active h1{
+    display: block;
+}
+.space.honeydisplay{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/honeydis.jpg);
+}
+.space.honeydisplay .intro{
+    display: none;
+}
+.drop, .dropda{
+    color: #fff;
+    bottom: 4px;
+    right: -58px;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.clover.active .drop, .dandelion.active .dropda{
+    display: none;
+}
+.clover.active .pick, .dandelion.active .pick{
+    color: #fff;
+    bottom: 4px;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transform: rotate(180deg);
+}
+.pick{
+    display: none;
+}
+
+.clover .backside, .dandelion .backsideda {
+    transform: rotateY(180deg);
+    background-color: #f1c40f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.clover.active .backside.pop, .dandelion.active .backsideda.pop{
+    transform: rotateY(0deg);
+    justify-content: flex-start;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+.price{
+    background: rgb(230, 115, 7);
+    padding: 3px 15px 3px 5px;
+    border-radius: 10px;
+    width: 45%;
+    margin: 10px 0;
+    border: 2px solid #fff;
+}
+.headerr{
+    color: rgb(230, 115, 7);
+    font-size: 20px;
+    
+}
+.closeflip{
+    color: #ffffff;
+    background-color: rgb(64, 152, 5);
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 6px;
+}
+.backside p, .backsideda p{
+    padding: 0px 0px 0px 0px;
+}
+.backside h3, .backsideda h3{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+.hon{
+    height: auto;
+    background-color: rgb(230, 115, 7);
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 10px 0px 10px;
+    border: 1px solid #fff;
+
+}
+.clover .backside::-webkit-scrollbar-thumb{
+    background-color: rgb(64, 152, 5);
+    border-radius: 10px;
+}
+.card::-webkit-scrollbar-track {
+    background: #be2323;
+}
+.order-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+.order-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-popup-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-popup {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.order-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-list li span {
+    flex: 1;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: red;
+    cursor: pointer;
+}
+#confirmation-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+}
+
+#confirmation-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#confirmation-form input[type="text"],
+#confirmation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#confirmation-form button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#confirmation-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+#copy-order, .see, .seeda {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid rgb(230, 115, 7);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    animation: bounce 3s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%) infinite;;
+}
+@keyframes bounce{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 15px;
+    }
+    100%{
+        top: 15px;
+    }
+}
+
+.hidden{
+    display: none;
+}
+#order-summary {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.containerabout {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(230, 115, 7, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-summary .remove-item{
+    display: none;
+}
+.order-summary li span{
+    padding-right: 40px;
+}
+.order-summary li{
+    padding-bottom: 10px;
+}
+.review {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    background-color: rgb(230, 115, 7);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .5s ease;
+}
+
+.review:hover{
+    transform: scale(1.02);
+}
+
+#review-form {
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.confirm-order{
+    background-color: rgb(230, 115, 7);
+    padding: 5px 10px ;
+    margin-left: 85px;
+    color: #fff;
+    border: 2px solid rgb(64, 152, 5);
+    border-radius: 6px;
+}
+#total-price{
+    margin-left: 5px;
+    padding: 0px 0px 20px 5px;
+}
+.section,.sections{
+    background-color: rgb(64, 152, 5);
+    color: #fff;
+    border-radius: 40px;
+    padding: 30px 100px 30px 100px;
+}
+.sectio{
+    background-color: rgb(64, 152, 5);
+    color: #fff;
+    border-radius: 40px;
+    padding: 30px;
+}
+.sectio h1{
+    text-align: center;
+    color: rgb(230, 115, 7);
+
+}
+.section h2, .sectio h2, .review h1{
+    border-left: 8px solid rgb(230, 115, 7);
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.carbon{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 100px 0;
+}
+.carbon section{
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: 1s ease;
+}
+.carbon section:hover{
+    transform: scale(1.06);
+    box-shadow: 2px 4px 13px 0px #000000;
+}
+.carbon section ul{
+    padding-left: 10px;
+}
+.Located{
+    background: rgb(64, 152, 5);
+    max-width: 800px;
+    padding: 50px;
+    color: #fff;
+    margin-bottom: 100px;
+    border-radius: 30px;
+}
+.Located h2{
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(230, 115, 7);
+    margin-bottom: 20px;
+}
+.Located h3{
+    border-left: 6px solid rgb(230, 115, 7);
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.Located p{
+    margin-bottom: 30px;
+}
+.Located img{
+    width: 800px;
+    height: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.delivery-paid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 100px;
+}
+.locations{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 40px;
+}
+.pay ul{
+    margin-bottom: 20px;
+}
+.pay p{
+    background: rgb(230, 115, 7);
+    padding: 5px;
+    border-radius: 10px;
+}
+.pay span{
+    font-style: italic;
+    font-weight: 600;
+}
+.pic-contain{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    float: right;
+}
+.section img, .sections img{
+    width: 394px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+.rich{
+    float: left;
+}
+.rich img{
+    margin-left: 0px;  
+}
+.reviewed{
+    background-color: rgba(64, 152, 5, 0.884);
+    border-radius: 10px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#name, #review{
+    border-radius: 10px;
+    border: none;
+}
+#reviews{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 400px;
+}
+#reviews::-webkit-scrollbar{
+    display: none;
+}
+.circle{
+    position: relative;
+    left: -570px;
+    top: -20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.447);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    z-index: 100; 
+    pointer-events: none; 
+}
+
+.overlay h1 {
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+.overlay-disabled {
+    pointer-events: all;
+}
+
+.plum-image.disabled .overlay {
+    display: flex;
+}
+
+.plum-image.disabled {
+    pointer-events: none;
+}
+
+.plum-image.disabled .overlay-disabled {
+    pointer-events: all;
+    position: relative;
+    top: -1417px;
+    align-items: center;
+    justify-content: center;
+    height: 87vh;
+}
+.order-summary button{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.vertical-navigation.active +.space .overlay{
+    display: none;
+}
+.vertical-navigation.active +.space.plumdisplay .overlay{
+    display: flex;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer h4{
+    margin-bottom: 2px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons{
+   color: #000;
+    margin-top: 6px;
+}
+.icons ion-icon{
+    margin-right: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+     color: rgb(230, 115, 7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .vertical-navigation.active {
+        right: 0;
+        width: 20%;
+    }
+
+    .vertical-navigation {
+        right: 0;
+        width: 20%;
+    }
+
+    .space {
+        height: 92vh;
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .space{
+        height: 95vh;
+    }
+    .menu,.close.active{
+        right: 100px;
+        display: block;
+    }
+    .vertical-navigation.active {
+        width: 30%;
+    }
+    .vertical-navigation{
+        right: 180px;
+        width: 0%;
+    }
+    .vertical-navigation.active +.space{
+        width: 83%;
+    }
+    .vertical-navigation.active +.space .intro{
+        width: 253px;
+        top: 130px;
+    }
+    .vertical-navigation.active +.space .overlay{
+        display: none;
+    }
+    .vertical-navigation.active +.space.plumdisplay .overlay{
+        display: flex;
+    }
+    .intro{
+        width: 375px;
+        top: 140px;
+        right: 18px;
+        transition: .3s linear;
+    }
+    .vertical-navigation.active +.space .intro h2{
+        font-size: 2.5rem;
+    }
+    .intro h2{
+        font-size: 3rem;
+    }
+    .vertical-navigation.active +.space .intro h4{
+        font-size: 20px;
+    }
+    .intro h4{
+        font-size: 25px;
+    }
+    .vertical-navigation.active +.space .intro p{
+        font-size: 15px;
+    }
+    .intro p{
+        font-size: 16px;
+    }
+    .fruti{
+        position: relative;
+        top: -185px;
+        transition: 1s ease;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .fruti.active{
+        position: absolute;
+        height: 95vh;
+        top: 45px;
+        width: 30%;
+        left: 0px;
+    }
+    .fruti li:first-child{
+        margin: 0px 0px 0px 0px;
+    }
+    .fruti li:last-child{
+        margin: 0px 0px 0px 0px;
+    }
+    .vege{
+        flex-direction: column;
+        justify-content: space-evenly;
+        top: 0px;
+        width: 27%;
+        left: -200px;
+    }
+    .vege.active{
+        position: absolute;
+        display: flex;
+        height: 95vh;
+        top: 45px;
+        width: 30%;
+        left: 0px;
+    }
+    .vege li:first-child{
+        margin: 0 0px 0 0px;
+    }
+    .vege li:last-child{
+        margin: 0 0px 0 0px;
+    }
+    .fruti-info{
+        width: 90%;
+    }
+    .space.fruitdisplay .fruti-info.active{
+        top: -130px;
+        width: 90%;
+        margin: 0px 0 0 20px;
+    }
+    .fruti-info h2{
+        font-size: 60px;
+        border-left: 5px solid rgb(230, 115, 7);
+    }
+    .space.fruitdisplay .fruti-info.active h2{
+        right: 0px;
+    }
+    .space.fruitdisplay .fruti-info.active h4{
+        right: 0px;
+        font-size: 25px;
+    }
+    .fruti-info p{
+        font-size: 14px;
+    }
+    .space.fruitdisplay .fruti-info.active p{
+        right: 0px;
+    }
+    .vege-info{
+        position: relative;
+        width: 90%;
+        top: -275px;
+    }
+    .space.fruitdisplay .vege-info.active{
+        top: -320px;
+        width: 90%;
+        margin: 0px 0 0 20px;
+    }
+    .vege-info h2{
+        font-size: 45px;
+        border-left: 5px solid rgb(230, 115, 7);
+    }
+    .space.fruitdisplay .vege-info.active h2{
+        left: 0px;
+    }
+    .vege-info h4{
+        left: -1500px;
+        position: relative;
+    }
+    .space.fruitdisplay .vege-info.active h4{
+        left: 0px;
+        font-size: 23px;
+    }
+    .vege-info p{
+        font-size: 14px;
+    }
+    .appledisplay, .berrydisplay, .honeydisplay, .pinedisplay, .strawdisplay, .melondisplay, .mangodisplay, .orangedisplay, .plumdisplay, .carrotdisplay, .oniondisplay, .cucumberdisplay, .lettucedisplay, .spinachdisplay, .greendisplay, .pumkindisplay, .brocollidisplay, .garlicdisplay, .gingerdisplay, .tomatodisplay{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .space.fruitdisplay .vege-info.active p{
+        left: 0px;
+    }
+    .pin, .straw-image, .apple-image, .water-image, .mango-image, .orange-image, .berry-image, .plum-image{
+        position: relative;
+        top: -810px;
+        left: 0px;
+        
+    }
+    .spinach-image, .lettuce-image, .pumkin-image, .cucumber-image, .brocolli-image, .tomato-image, .onion-image, .garlic-image, .ginger-image, .carrot-image, .green-image{
+        top: -860px;
+        left: 0px;
+    }
+    .pin.active, .straw-image.active, .apple-image.active, .mango-image.active, .orange-image.active, .berry-image.active, .plum-image.active,.spinach-image.active, .lettuce-image.active, .pumkin-image.active, .cucumber-image.active, .brocolli-image.active, .tomato-image.active, .onion-image.active, .garlic-image.active, .ginger-image.active, .carrot-image.active, .green-image.active{
+        display: flex;
+        flex-direction: column;
+    }
+    .space.fruitdisplay .pin.active .pinpoint, .space.fruitdisplay .straw-image.active .pinpoint, .space.fruitdisplay .apple-image.active .pinpoint, .space.fruitdisplay .water-image.active .pinpoint, .space.fruitdisplay .mango-image.active .pinpoint, .space.fruitdisplay .orange-image.active .pinpoint, .space.fruitdisplay .berry-image.active .pinpoint, .space.fruitdisplay .plum-image.active .pinpoint, .space.fruitdisplay .ginger-image.active .pinpoint, .space.fruitdisplay .carrot-image.active .pinpoint, .space.fruitdisplay .green-image.active .pinpoint, .space.fruitdisplay .spinach-image.active .pinpoint, .space.fruitdisplay .pumkin-image.active .pinpoint, .space.fruitdisplay .lettuce-image.active .pinpoint, .space.fruitdisplay .cucumber-image.active .pinpoint, .space.fruitdisplay .brocolli-image.active .pinpoint, .space.fruitdisplay .tomato-image.active .pinpoint, .space.fruitdisplay .onion-image.active .pinpoint, .space.fruitdisplay .garlic-image.active .pinpoint{
+        display: block;
+        width: 96%;
+        height: 0px;
+        position: relative;
+        border-left: none;
+        top: 0px;
+        left: 0px;
+    }
+    .pin.active .imagedisplay h1, .straw-image.active .imagedisplay h1, .apple-image.active .imagedisplay h1, .water-image.active .imagedisplay h1, .mango-image.active .imagedisplay h1, .orange-image.active .imagedisplay h1, .berry-image.active .imagedisplay h1, .plum-image.active .imagedisplay h1, .spinach-image.active .imagedisplay  h1, .lettuce-image.active .imagedisplay h1, .pumkin-image.active .imagedisplay h1, .cucumber-image.active .imagedisplay h1, .brocolli-image.active .imagedisplay h1, .tomato-image.active .imagedisplay h1, .onion-image.active .imagedisplay h1, .garlic-image.active .imagedisplay h1, .ginger-image.active .imagedisplay h1, .carrot-image.active .imagedisplay h1, .green-image.active .imagedisplay h1{
+        font-size: 40px;
+        top: 0px;
+        right: 0px;
+        margin-bottom: 28px;
+    }
+    .pin.active img, .straw-image.active img, .apple-image.active img, .water-image.active img, .mango-image.active img, .orange-image.active img, .berry-image.active img, .plum-image.active img, .spinach-image.active img, .lettuce-image.active img, .pumkin-image.active img, .cucumber-image.active img, .brocolli-image.active img, .tomato-image.active img, .onion-image.active img, .garlic-image.active img, .ginger-image.active img, .carrot-image.active img, .green-image.active img{
+        width: 250px;
+        height: 250px;
+    }
+    @keyframes animation{
+        0%{top: 0px;}
+        40%{top: 0px;}
+        50%{top: -250px;}
+        75%{top: -250px;}
+        100%{top: 0px;}
+    }
+    .krystal{
+        right: 0px;
+        top: 0px;
+        height: 250px;
+        width: 250px;
+    }
+    .imagedisplay{
+        position: relative;
+        right: -20px;
+        top: 0px;
+        width: 100%; 
+    }
+    .honey.active{
+        align-items: center;
+        right: 0px;
+        flex-direction: column;
+        bottom: 1000px;
+    }
+    .clover img, .dandelion img{
+        border: 2px solid #fff;
+        width: 238px;
+        height: 258px;
+        border-radius: 20px;
+        position: relative;
+        display: none;
+    }
+    .clover, .dandelion{
+        width: 90%;
+        height: 7vh;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .price{
+        width: 75%;
+        text-align: center;
+    }
+    .order-popup {
+        width: 380px;
+    }
+    #confirmation-form {
+        width: 75%;
+        top: 59%;
+    }
+    #order-summary {
+        width: 75%;
+    }
+    .section, .sections{
+        border-radius: 20px;
+        padding: 10px;
+        width: 380px;
+    }
+    .sectio{
+        background-color: rgb(64, 152, 5);
+        color: #fff;
+        border-radius: 40px;
+        padding: 30px;
+    }
+    .carbon{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .carbon section{
+        padding: 10px;
+        border-radius: 10px;
+        margin: 5px 0;
+    }
+    .carbon section ul{
+        padding-left: 10px;
+    }
+    .Located{
+        background: rgb(64, 152, 5);
+        width: 320px;
+        padding: 30px;
+        color: #fff;
+        margin-bottom: 100px;
+        border-radius: 30px;
+    }
+    .Located h2{
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgb(230, 115, 7);
+        margin-bottom: 20px;
+    }
+    .Located h3{
+        border-left: 6px solid rgb(230, 115, 7);
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .Located p{
+        margin-bottom: 70px;
+    }
+    .Located img{
+        width: 330px;
+        height: auto;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    .delivery-paid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+    .locations{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 40px;
+    }
+    .pay ul{
+        margin-bottom: 20px;
+    }
+    .pay p{
+        background: rgb(230, 115, 7);
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .pay span{
+        font-style: italic;
+        font-weight: 600;
+    }
+    .pic-contain{
+        width: auto;
+        height: auto;
+        display: flex;
+        float: right;
+    }
+    .section img, .sections img{
+        width: 355px;
+    }
+    .reviewed{
+        background-color: rgba(64, 152, 5, 0.884);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #reviews::-webkit-scrollbar{
+        display: none;
+    }
+    .containerabout{
+        padding: 20px;
+    }
+    .section p{
+        padding: 10px;
+    }
+    .circle{
+        position: relative;
+        left: -170px;
+        top: 0px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .plum-image.disabled .overlay-disabled {
+        top: -359px;
+        height: 106vh;
+    }
+    .move{
+        background-color: rgba(0, 0, 0, 0.329);
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 411px) {
+    .menu,.close.active{
+        right: 70px;
+    }
+    .vertical-navigation.active {
+        width: 31%;
+    }
+    .vertical-navigation{
+        right: 180px;
+        width: 0%;
+    }
+    .vertical-navigation ul{
+        padding: 20px;
+    }
+    .vertical-navigation.active +.space .intro{
+        width: 240px;
+        top: 130px;
+        right: 0px;
+    }
+    .intro{
+        width: 280px;
+        right: 63px;
+    }
+    .vertical-navigation.active +.space .intro h4{
+        max-width: 240px;
+    }
+    .intro h4{
+        width: 340px;
+    }
+    .intro h2{
+        width: 235px;
+    }
+    .intro p{
+        font-size: 14px;
+        width: 330px;
+        transition: .5s ease;
+    }
+    .vertical-navigation.active +.space .intro p{
+        width: 240px;
+    }
+    .space.fruitdisplay .vege-info.active h2{
+        font-size: 35px;
+    }
+    .pin, .straw-image, .apple-image, .water-image, .mango-image, .orange-image, .berry-image, .plum-image{
+        top: -1050px;
+    }
+    .spinach-image, .lettuce-image, .pumkin-image, .cucumber-image, .brocolli-image, .tomato-image, .onion-image, .garlic-image, .ginger-image, .carrot-image, .green-image{
+        top: -975px;
+    }
+    .move{
+        background-color: rgba(0, 0, 0, 0.329);
+        width: 220px;
+    }
+    .krystal{
+        right: 6px;
+        top: 0px;
+        height: 220px;
+        width: 220px;
+    }
+    .honey.active{
+        align-items: center;
+        right: 0px;
+        flex-direction: column;
+        bottom: 1250px;
+    }
+    .clover img, .dandelion img{
+        width: 210px;
+    }
+    .clover.active, .dandelion.active{
+        height: 65vh;
+    }
+    .quantity{
+        margin: 10px;
+    }
+    .clover, .dandelion{
+        width: 90%;
+        height: 7vh;
+        margin-bottom: 30px;
+        margin-top: 50px;
+    }
+    .clover h1, .dandelion h1{
+        margin-top: 45px;
+    }
+    .order-popup {
+        width: 300px;
+    }
+    .section, .sections{
+        width: 320px;
+    }
+    .carbon section{
+        padding: 1px;
+        margin: 8px 0;
+        overflow: hidden;
+    }
+    .carbon section ul{
+        padding-left: 20px;
+    }
+    .Located{
+        width: 280px;
+    }
+    .Located img{
+        width: 290px;
+    }
+    .locations{
+        grid-template-columns: repeat(1, 2fr);
+    }
+    .pay ul li{
+        margin-bottom: 10px;
+    }
+    .pay span{
+        font-style: italic;
+        font-weight: 600;
+    }
+    .section img ,.sections img{
+        width: 285px;
+    }
+    .reviewed{
+        background-color: rgba(64, 152, 5, 0.884);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerabout{
+        padding: 10px;
+    }
+    .section p{
+        padding: 10px;
+    }
+    #review-form{
+        padding: 20px;
+    }
+    .circle{
+        left: -130px;
+    }
+    .price {
+        width: 90%;
+        text-align: center;
+        font-size: 10px;
+    }
+    .space.fruitdisplay .vege-info.active{
+        top: -450px;
+        width: 90%;
+        margin: 0px 0 0 20px;
+    }
+    .plum-image.disabled .overlay-disabled {
+        height: 156vh;
+    }
+    .overlay h1{
+        font-size: 30px;
+    }
+    .space.fruitdisplay .vege-info.active h4{
+        left: 0px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
